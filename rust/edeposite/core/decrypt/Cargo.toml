@@ -1,0 +1,21 @@
+[package]
+name = "decrypt"
+version = "0.1.0"
+authors = ["root"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+openssl = { version = "0.10", features = ["vendored"] }
+pem = "0.8"
+aes = "0.7.0"
+block-modes = "0.8.1"
+hex-literal = "0.3.1"
+sha2 = "0.9.4"
+definitions = { path = "../../libraries/definitions" }
+variables = { path = "../../libraries/variables" }
+functions = { path = "../../libraries/functions" }
+db = { path = "../../libraries/db" }
+functions_crypto = { path = "../../libraries/functions_crypto" }
+json = "*"

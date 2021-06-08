@@ -1,0 +1,28 @@
+[package]
+name = "edeposite"
+version = "0.1.0"
+authors = ["root"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+git = { path = "./core/git" }
+clap = "2.33.3"
+encrypt = { path = "./core/encrypt" }
+decrypt = { path = "./core/decrypt" }
+make_signed_user_payment = { path = "./core/make_signed_user_payment" }
+publish = { path = "./core/publish" }
+user_transactions = { path = "./core/user_transactions" }
+user = { path = "./core/user" }
+users = { path = "./core/users" }
+merchant = { path = "./core/merchant" }
+merchants = { path = "./core/merchants" }
+create_user = { path = "./core/create_user" }
+create_merchant = { path = "./core/create_merchant" }
+credit_merchant = { path = "./core/credit_merchant" }
+transaction = { path = "./core/transaction" }
+transactions = { path = "./core/transactions" }
+make_transaction = { path = "./core/make_transaction" }
+define_merchant_hierarchy = { path = "./core/define_merchant_hierarchy" }
+make_transaction_to_merchant = { path = "./core/make_transaction_to_merchant" }

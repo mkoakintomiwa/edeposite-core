@@ -1,0 +1,22 @@
+{
+    "active": true,
+    "db": {
+        "name": "edeposit_main",
+        "password": "eaedeft6ufe6fddssetyugrrt4azd",
+        "user": "edeposit_user"
+    },
+    "domain": "45.82.75.100/~central",
+    "handshake_auth_key": "e734b58e5170be39529e43c519e43b7399305609ec599b8991e176f0da61ce8b",
+    "host": "45.82.75.100",
+    "db_host": "localhost",
+    "integration_time": 1604506716,
+    "name": "E-deposite Central System",
+    "node_base_url": "http://45.82.75.100/~central",
+    "node_id": "central",
+    "node_url": "http://45.82.75.100/~central",
+    "rel_dirname": "",
+    "ssh": {
+        "password": "eaedeft6ufe6fddssetyugrrt4azd",
+        "username": "ddssetyugrrt4azdeaedeft6ufe6f"
+    }
+}

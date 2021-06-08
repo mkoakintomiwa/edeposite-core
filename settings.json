@@ -1,0 +1,10 @@
+{
+    "host": "34.70.148.133",
+    "db_host": "localhost",
+    "db_user": "edeposit_user",
+    "db_password": "eaedeft6ufe6fddssetyugrrt4azd",
+    "db_name": "edeposit_main",
+    "rel_dirname": "",
+    "handshake_auth_key": "e734b58e5170be39529e43c519e43b7399305609ec599b8991e176f0da61ce8b",
+    "site_port": "443"
+}
