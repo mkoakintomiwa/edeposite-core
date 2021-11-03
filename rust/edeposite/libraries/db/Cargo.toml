@@ -10,7 +10,7 @@ edition = "2018"
 definitions = { path = "../definitions" }
 variables = { path = "../variables" }
 functions = { path = "../functions" }
-mysql = "*"
+mysql = "21.0.2"
 serde_json = "1.0"
 mysql_common = "0.22.2"
 indexmap = "1.6.0"

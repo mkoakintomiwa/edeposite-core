@@ -38,17 +38,20 @@ pub async fn portal_config(db_alias: &str, portal_id: &str)->String{
 
 pub fn conn(db_name: &str, db_user: &str, db_password: &str, db_host: &str, db_port: &str)->Pool{
     let url = format!("mysql://{}:{}@{}:{}/{}",db_user,db_password,db_host,db_port,db_name);
-    Pool::new(url).unwrap()
+    let opts = Opts::from_url(&url).unwrap();
+    Pool::new(opts).unwrap()
 }
 
 
 pub fn conn_pool(db_name: &str, db_user: &str, db_password: &str, db_host: &str, db_port: &str)->Pool{
-    Pool::new(config(db_name, db_user, db_password, db_host, db_port)).expect("Error in connection")
+    let opts = Opts::from_url(&config(db_name, db_user, db_password, db_host, db_port)).unwrap();
+    Pool::new(opts).expect("Error in connection")
 }
 
 
 pub fn pool(config: String)->Pool{
-    Pool::new(config).expect("Error in connection")
+    let opts = Opts::from_url(&config).unwrap();
+    Pool::new(opts).expect("Error in connection")
 }
 
 
