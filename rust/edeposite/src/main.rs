@@ -15,6 +15,7 @@ use credit_merchant;
 use transaction;
 use transactions;
 use make_transaction;
+use make_user_transaction;
 use define_merchant_hierarchy;
 use make_transaction_to_merchant;
 
@@ -293,6 +294,20 @@ fn main() {
 
 
 
+        .subcommand(SubCommand::with_name("make-user-transaction")
+            .about("Make transaction")
+            .version("1.3")
+            .author("Akintomiwa Opemipo <ibnakintomiwa@gmail.com>")
+
+            .arg(Arg::with_name("base64 arguments")
+                .help("sender_public_address, sender_private_key, recipient_public_address, token")
+                .index(1)
+            )
+            
+        )
+
+
+
         .subcommand(SubCommand::with_name("define-merchant-hierarchy")
             .about("define merchant hierarchy")
             .version("1.3")
@@ -416,6 +431,11 @@ fn main() {
 
     if let Some(_matches) = matches.subcommand_matches("make-transaction") {
         make_transaction::main();
+    }
+
+
+    if let Some(_matches) = matches.subcommand_matches("make-user-transaction") {
+        make_user_transaction::main();
     }
 
 

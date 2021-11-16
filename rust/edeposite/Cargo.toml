@@ -24,5 +24,6 @@ credit_merchant = { path = "./core/credit_merchant" }
 transaction = { path = "./core/transaction" }
 transactions = { path = "./core/transactions" }
 make_transaction = { path = "./core/make_transaction" }
+make_user_transaction = { path = "./core/make_user_transaction" }
 define_merchant_hierarchy = { path = "./core/define_merchant_hierarchy" }
 make_transaction_to_merchant = { path = "./core/make_transaction_to_merchant" }

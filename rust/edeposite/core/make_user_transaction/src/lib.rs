@@ -4,14 +4,15 @@ use functions_crypto::*;
 use json::object;
 use indexmap::*;
 
-fn main() {
-    std::process::exit(0);
+pub fn main() {
+    //std::process::exit(0);
     let  mut response = object!{}; 
     let _get = _get();
     let sender_address = _get["sender_address"].as_str().unwrap();
     let recipient_address = _get["recipient_address"].as_str().unwrap();
     let transaction_token = _get["token"].as_str().unwrap().parse::<f32>().unwrap();
     let created_at = timestamp().to_string();
+    
 
     let sender = user(sender_address);
     let recipient = user(recipient_address);
@@ -52,6 +53,7 @@ fn main() {
             response["user_final_token"] = recipient_final_token.into();
             response["initial_total_token_in_system"] = initial_total_token_in_system.into();
             response["final_total_token_in_system"] = final_total_token_in_system.into();
+            response["created_at"] = created_at.clone().into();
             response["panic"] = json::Null;
 
             for node_id in active_node_ids(){

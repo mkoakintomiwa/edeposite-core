@@ -52,6 +52,7 @@ pub fn main() {
             response["initial_total_token_in_system"] = initial_total_token_in_system.into();
             response["final_total_token_in_system"] = final_total_token_in_system.into();
             response["panic"] = json::Null;
+            response["created_at"] = created_at.clone().into();
 
             for node_id in active_node_ids(){
                 let _settings = node_settings(&node_id);
